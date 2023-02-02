@@ -1,0 +1,52 @@
+{
+    "manifest_version": 3,
+    "name": "Tab collection",
+    "version": "1.0.0",
+    "description": "收集没有读完的页面，下次再读",
+    "action":
+    {
+      "default_icon": "images/icon.png",
+      "default_title": "收集保管tab list",
+      "default_popup": "popup.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "js/contents.js"
+            ],
+            "matches": [
+                "*://*.targetWeb.com/*"
+            ]
+        }
+    ],
+
+    "permissions":
+    [
+      "tabs",
+      "notifications",
+      "storage",
+      "unlimitedStorage"
+    ], 
+    "externally_connectable": { 
+        "matches":[
+            "*://*.jianshu.com/*"
+        ]
+    },
+    "web_accessible_resources":  [{ 
+        "resources": [
+            "list.html",
+            "js/list.js"
+        ],
+        "matches": ["<all_urls>"]
+      }],
+
+    "options_page": "options.html",
+
+    "host_permissions": [
+        "*://*.jianshu.com/*"
+    ]
+  }
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阅读清单</title>
+    <style>
+        .delete-btn{
+            margin-left:5px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 40px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .buttons{
+            margin-top:30px;
+        }
+        .buttons>span{
+            display: inline-block;
+            line-height: 30px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            width: 120px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .buttons>span:hover{
+            background: #ccc;
+        }
+        .item{
+           
+            line-height: 30px; 
+            text-align: left;
+        }
+        .item>img{
+            width: 20px;
+            height: 20px;
+        }
+        .item>a{
+            margin-left: 10px;
+            font-size: medium;
+            text-decoration:none;
+            color:#333;
+        }
+  
+    </style>
+</head>
+<body>
+    <div id="list"></div>
+    <div class="buttons">
+        <span id="openAllBtn">一键全开</span>
+        <span id="closeAllBtn">一键清空</span>
+    </div>
+</body>
+<script src="js/list.js"></script>
+</html>
